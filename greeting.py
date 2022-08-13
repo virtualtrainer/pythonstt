@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 app = Flask(__name__)
-
+import speech_recognition as sr
 
 @app.route('/getmsg/', methods=['GET'])
 def respond():
