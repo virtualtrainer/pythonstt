@@ -26,7 +26,7 @@ def respond():
 
 @app.route('/audio/', methods=['GET'])
 def respond1():
-    # Retrieve the name from the url parameter /getmsg/?name=
+    # Retrieve the name from the url parameter /audio/?audio=
     audio = request.args.get("audio", None)
 
     # For debugging
