@@ -24,6 +24,28 @@ def respond():
     # Return the response in json format
     return jsonify(response)
 
+@app.route('/audio/', methods=['GET'])
+def respond1():
+    # Retrieve the name from the url parameter /getmsg/?name=
+    audio = request.args.get("audio", None)
+
+    # For debugging
+    print(f"Received: {name}")
+
+    response = {}
+
+    # Check if the user sent a name at all
+    if not audio:
+        response["ERROR"] = "No name found. Please send a name."
+    # Check if the user entered a number
+    elif str(audio).isdigit():
+        response["ERROR"] = "The name can't be numeric. Please send a string."
+    else:
+        response["MESSAGE"] = f"Welcome {name} to our awesome API!"
+
+    # Return the response in json format
+    return jsonify(response)
+
 
 @app.route('/post/', methods=['POST'])
 def post_something():
