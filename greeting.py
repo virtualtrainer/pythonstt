@@ -41,7 +41,7 @@ def respond1():
     elif str(audio).isdigit():
         response["ERROR"] = "The name can't be numeric. Please send a string."
     else:
-        response["MESSAGE"] = f"Welcome {name} to our awesome API!"
+        response["MESSAGE"] = f"Welcome {audio} to our awesome API!"
 
     # Return the response in json format
     return jsonify(response)
