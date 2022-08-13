@@ -30,7 +30,7 @@ def respond1():
     audio = request.args.get("audio", None)
 
     # For debugging
-    print(f"Received: {name}")
+    print(f"Received: {audio}")
 
     response = {}
 
